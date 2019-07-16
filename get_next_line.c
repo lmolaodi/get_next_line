@@ -6,7 +6,7 @@
 /*   By: lmolaodi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 13:31:47 by lmolaodi          #+#    #+#             */
-/*   Updated: 2019/07/15 15:33:14 by lmolaodi         ###   ########.fr       */
+/*   Updated: 2019/07/16 12:45:43 by lmolaodi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	ft_check_line(int fd, char **file, char **buff)
 {
-	char	*tmp;
-	int		i;
+	char		*tmp;
+	int			i;
 
 	i = 0;
 	while (file[fd][i] != '\n' && file[fd][i])
@@ -35,7 +35,7 @@ char	ft_check_line(int fd, char **file, char **buff)
 	return (1);
 }
 
-int	get_next_line(const int fd, char **line)
+int		get_next_line(const int fd, char **line)
 {
 	static char	*file[1024];
 	char		text[BUFF_SIZE + 1];

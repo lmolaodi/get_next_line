@@ -6,7 +6,7 @@
 /*   By: lmolaodi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 12:00:56 by lmolaodi          #+#    #+#             */
-/*   Updated: 2019/06/20 15:59:55 by lmolaodi         ###   ########.fr       */
+/*   Updated: 2019/07/16 12:40:26 by lmolaodi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,15 @@
 
 char	*ft_strnew(size_t size)
 {
-	char *newstr;
+	char	*newstr;
+	size_t	i;
 
-	newstr = ft_memalloc(size + 1);
-	if (newstr)
-		ft_bzero(newstr, size + 1);
+	if (!(newstr = ft_memalloc(size + 1)))
+		return (NULL);
+	i = 0;
+	while (i < size)
+	{
+		newstr[i++] = '\0';
+	}
 	return (newstr);
 }
